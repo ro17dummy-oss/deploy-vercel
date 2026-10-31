@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Nox Aion 4.8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NOX AION 4.8 : Upheaval</title>
+  <meta name="description" content="Mainkan AION 4.8 dengan Marketplace Web Broker, Prestige Pack, Abyss Leaderboard GP/AP, dan ribuan pemain online tanpa wipe." />
+  <link rel="icon" type="image/png" href="assets/aion20/assets/nox-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/aion20/styles/aion-core.css" />
+  <link rel="stylesheet" href="assets/aion20/styles/home.css" />
+</head>
+<body>
+
+<!-- ===================== PRELOADER ===================== -->
+<div class="preloader" id="preloader" role="status" aria-label="Loading Portal" data-welcome="Welcome to Atreia">
+  <div class="pre-inner">
+    <img src="assets/aion20/assets/nox-logo.png" alt="Logo Nox Aion" style="height:88px;width:auto;" />
+    <div class="pre-bar"><span id="pre-fill"></span></div>
+    <div class="pre-status" id="pre-status">Welcome to Atreia</div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="NOX AION">
+      <img src="assets/aion20/assets/nox-logo.png" alt="Logo Nox Aion" />
+      <span class="wm">NOX AION</span>
+    </a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero hero-coming-soon" id="top" data-screen-label="Hero">
+  <video class="hero-bg" autoplay muted loop playsinline poster="assets/aion20/assets/hero-bg.jpg" aria-label="Atreia Landscape">
+    <source src="assets/aion20/assets/hero-bg.webm" type="video/webm" />
+  </video>
+  <div class="hero-scrim"></div>
+
+  <div class="cs-center">
+    <h1 class="cs-title">COMING SOON</h1>
+    <!-- shortcut: phase states (done / active / upcoming) are static HTML classes, update class when moving to next phase -->
+    <div class="cs-phases" role="group" aria-label="Game Development Roadmap Phases">
+      <!-- Phase 1 -->
+      <div class="cs-seg active" tabindex="0" aria-describedby="tipPhase1">
+        <div class="cs-seg-bar"><div class="cs-seg-fill"></div></div>
+        <span class="cs-seg-label">DEVELOPMENT</span>
+        <div class="cs-tooltip" id="tipPhase1" role="tooltip">
+          <div class="cs-tip-head">
+            <span class="cs-tip-phase">PHASE 1 · DEVELOPMENT</span>
+            <span class="cs-tip-badge active">IN PROGRESS</span>
+          </div>
+          <p>Core server architecture, Aion 4.8 Upheaval mechanics, and database integration are currently in active development.</p>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="cs-seg upcoming" tabindex="0" aria-describedby="tipPhase2">
+        <div class="cs-seg-bar"><div class="cs-seg-fill"></div></div>
+        <span class="cs-seg-label">CBT</span>
+        <div class="cs-tooltip" id="tipPhase2" role="tooltip">
+          <div class="cs-tip-head">
+            <span class="cs-tip-phase">PHASE 2 · CLOSED BETA (CBT)</span>
+            <span class="cs-tip-badge upcoming">UPCOMING</span>
+          </div>
+          <p>Internal class balance, Vision Stigma verification, and Kaldor fortress siege stability trials.</p>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="cs-seg upcoming" tabindex="0" aria-describedby="tipPhase3">
+        <div class="cs-seg-bar"><div class="cs-seg-fill"></div></div>
+        <span class="cs-seg-label">OBT</span>
+        <div class="cs-tooltip" id="tipPhase3" role="tooltip">
+          <div class="cs-tip-head">
+            <span class="cs-tip-phase">PHASE 3 · OPEN BETA (OBT)</span>
+            <span class="cs-tip-badge upcoming">UPCOMING</span>
+          </div>
+          <p>Public stress testing, Web Marketplace synchronization, and final PvP combat tuning.</p>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="cs-seg upcoming" tabindex="0" aria-describedby="tipPhase4">
+        <div class="cs-seg-bar"><div class="cs-seg-fill"></div></div>
+        <span class="cs-seg-label">RELEASE</span>
+        <div class="cs-tooltip" id="tipPhase4" role="tooltip">
+          <div class="cs-tip-head">
+            <span class="cs-tip-phase">PHASE 4 · OFFICIAL RELEASE</span>
+            <span class="cs-tip-badge upcoming">UPCOMING</span>
+          </div>
+          <p>Grand opening of Atreia with full seasonal rewards, Abyss leaderboards, and permanent progression.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/aion20/home.js"></script>
+</body>
+</html>

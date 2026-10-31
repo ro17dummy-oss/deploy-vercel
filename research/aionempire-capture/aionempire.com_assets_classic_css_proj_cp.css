@@ -1,0 +1,141 @@
+.inline-block {
+    display: inline-block;
+}
+
+.links {
+    text-align:center;
+}
+.links li {
+    display: inline;
+    line-height: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+.race {
+    padding-left: 25px;
+    line-height: 30px;
+}
+.race.elyos {
+    background: url(../../../img/shop/race_0.gif) no-repeat 0 center;
+}
+
+.race.asmo {
+    background: url(../../../img/shop/race_1.gif) no-repeat 0 center;
+}
+
+.dropdown-menu {
+    min-width: 300px;
+}
+
+.item-desc {
+    max-height: 7rem;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.qina-amount {
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.list-items-lotto {
+    list-style: none;
+}
+
+.lh-item {
+    line-height: 32px;
+}
+
+.wheel-card {
+    background: url(../../images/wheel_bg.jpg) no-repeat;
+    background-size: cover;
+    min-height: 7rem;
+    color: #fff;
+}
+
+.wheel-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.wheel-card a, .stigma-card a {
+    color: #fff;
+}
+
+.firsts-card {
+    background: url(../../images/cp_firsts.jpg) no-repeat;
+    background-size: cover;
+    min-height: 7rem;
+    color: #fff;
+}
+
+.firsts-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.firsts-card a, .firsts-card a {
+    color: #fff;
+}
+
+.movie-wheel-card {
+    background: linear-gradient(135deg, #c7160c 0%, #8b0000 50%, #1a1a1a 100%);
+    min-height: 7rem;
+    color: #fff;
+}
+
+.movie-wheel-card a {
+    color: #fff;
+}
+
+.valentine-card {
+    background: url(../../images/valentine_bg.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 7rem;
+    color: #fff;
+}
+.valentine-card a {
+    color: #fff;
+}
+
+.stigma-card {
+    background: url(../../images/stigma.jpg) no-repeat;
+    background-size: cover;
+    min-height: 7rem;
+    color: #fff;
+}
+
+.ranking-card {
+    background: url(../../images/ranking.jpg) no-repeat;
+    color: #fff;
+    background-size: cover;
+}
+
+.btn-chest {
+    width:154px;
+    height:50px;
+    border: 0;
+    z-index: 99999;
+}
+.btn-chest-ru {
+    background: url(../../images/btn-chest.png) no-repeat 0 center;
+}
+
+.btn-chest-en {
+    background: url(../../images/btn-chest-en.png) no-repeat 0 center;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.img-filled {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}

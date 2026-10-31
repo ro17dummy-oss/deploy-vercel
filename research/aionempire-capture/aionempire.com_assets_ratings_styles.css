@@ -1,0 +1,521 @@
+/* ===========================================
+   PVP RATINGS - COMPONENT-SPECIFIC STYLES
+   Only ratings-specific components.
+   Base styles are provided by dark_fantasy.css.
+   =========================================== */
+
+/* === LAYOUT === */
+
+.ratings-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+}
+
+/* === PANELS (replaces .card) === */
+
+.panel {
+    background: #16161f;
+    border: 1px solid rgba(201, 170, 113, 0.12);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(201, 170, 113, 0.04);
+    transition: border-color 0.3s;
+}
+.panel:hover {
+    border-color: rgba(201, 170, 113, 0.25);
+}
+
+.panel-body {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.panel-body p:last-child { margin-bottom: 0; }
+
+/* === RATING TABLE SPECIFICS === */
+
+.rating-table {
+    font-size: 0.95em;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.rating-table td:last-child {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.rating-table th,
+.rating-table td {
+    padding: 0.5rem 0.45rem !important;
+}
+
+.rating-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: #12121a;
+}
+
+/* Form dots — need solid colors, not translucent badge defaults */
+.rating-table .badge-success { background: var(--color-win) !important; border-color: var(--color-win) !important; }
+.rating-table .badge-danger { background: var(--color-loss) !important; border-color: var(--color-loss) !important; }
+.rating-table .badge-warning { background: var(--color-draw) !important; border-color: var(--color-draw) !important; }
+.rating-table .badge-secondary { background: var(--color-leave) !important; border-color: var(--color-leave) !important; }
+
+/* === TABLE RESPONSIVE === */
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* === PLAYER STATS GRID === */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px 12px;
+    text-align: center;
+}
+
+.stat-item {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(201, 170, 113, 0.08);
+    border-radius: 4px;
+    padding: 12px 8px;
+    transition: border-color 0.2s;
+}
+.stat-item:hover {
+    border-color: rgba(201, 170, 113, 0.2);
+}
+
+.stat-value {
+    font-family: var(--font-main);
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #e8d5a3;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.8em;
+    color: #7a7769;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.stats-footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(201, 170, 113, 0.06);
+    font-size: 0.85em;
+    color: #7a7769;
+}
+
+/* === CLASS STATS (Opponent Class Performance) === */
+
+#classStatsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 20px;
+}
+.class-stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(201, 170, 113, 0.05);
+}
+.class-stat-row:last-child { border-bottom: none; }
+
+.class-stat-name {
+    flex: 0 0 130px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88em;
+    color: #d4d0c8;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+.class-stat-name .class-icon {
+    flex-shrink: 0;
+}
+
+.class-stat-bar-wrap {
+    flex: 1;
+    position: relative;
+    height: 22px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.class-stat-bar {
+    height: 100%;
+    border-radius: 3px;
+    opacity: 0.75;
+    transition: width 0.3s;
+}
+
+.class-stat-pct {
+    flex: 0 0 40px;
+    font-size: 0.79em;
+    font-weight: 700;
+    color: #d4d0c8;
+    text-align: right;
+}
+
+.class-stat-detail {
+    flex: 0 0 90px;
+    font-size: 0.82em;
+    color: #7a7769;
+    white-space: nowrap;
+}
+
+/* === STRETCH CARD (compatibility) === */
+
+.stretch-card { display: flex; }
+.stretch-card > .panel { width: 100%; flex: 1; }
+
+/* === COLOR VARS === */
+
+:root {
+    --color-win: #4CAF50;
+    --color-loss: #F44336;
+    --color-draw: #FFC107;
+    --color-leave: #9E9E9E;
+    --color-chart-line: #4A90D9;
+    --color-chart-grid: rgba(255,255,255,0.08);
+    --color-chart-text: #777;
+    --color-chart-bg: rgba(255,255,255,0.03);
+    --color-chart-text-light: #aaa;
+    --color-chart-text-dim: #bbb;
+    --color-card-border: rgba(201, 170, 113, 0.06);
+}
+
+/* === MATCH HISTORY CARD BARS === */
+
+.match-card {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    width: 100%;
+    border-left: 3px solid transparent;
+    border-bottom: 1px solid var(--color-card-border);
+    transition: background-color 0.15s;
+}
+.match-card:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+.match-card.mc-win   { border-left-color: var(--color-win);  background: rgba(76, 175, 80, 0.05); }
+.match-card.mc-loss  { border-left-color: var(--color-loss); background: rgba(244, 67, 54, 0.05); }
+.match-card.mc-draw  { border-left-color: var(--color-draw); background: rgba(255, 193, 7, 0.04); }
+.match-card.mc-leave { border-left-color: var(--color-leave); background: rgba(158, 158, 158, 0.04); }
+
+/* Light theme match cards */
+.light-theme .match-card {
+    border-bottom-color: rgba(100, 110, 140, 0.08);
+}
+.light-theme .match-card:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+.light-theme .match-card.mc-win   { border-left-color: #2e7d32; background: rgba(46, 125, 50, 0.05); }
+.light-theme .match-card.mc-loss  { border-left-color: #c62828; background: rgba(198, 40, 40, 0.05); }
+.light-theme .match-card.mc-draw  { border-left-color: #e67e22; background: rgba(230, 126, 34, 0.04); }
+.light-theme .match-card.mc-leave { border-left-color: #7a7f88; background: rgba(122, 127, 136, 0.04); }
+
+/* === BOSS NAV PILLS — unified with ui-pill === */
+.nav-pills .nav-link {
+    color: #b8a47a;
+    border: 1px solid rgba(201, 170, 113, 0.15);
+    background: rgba(201, 170, 113, 0.04);
+    margin-right: 4px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.93em;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.nav-pills .nav-link:hover {
+    color: #e8d5a3;
+    background: rgba(201, 170, 113, 0.1);
+    border-color: rgba(201, 170, 113, 0.35);
+}
+.nav-pills .nav-link.active {
+    color: #e8d5a3;
+    background: rgba(201, 170, 113, 0.15);
+    border-color: rgba(201, 170, 113, 0.5);
+}
+
+/* === CLASS ICONS === */
+.class-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+.class-icon.ci-FIGHTER      { background-image: url('/assets/classic/images/class-icon/gladiator.png'); }
+.class-icon.ci-KNIGHT       { background-image: url('/assets/classic/images/class-icon/templar.png'); }
+.class-icon.ci-ASSASSIN     { background-image: url('/assets/classic/images/class-icon/assassin.png'); }
+.class-icon.ci-RANGER       { background-image: url('/assets/classic/images/class-icon/ranger.png'); }
+.class-icon.ci-WIZARD       { background-image: url('/assets/classic/images/class-icon/sorcerer.png'); }
+.class-icon.ci-ELEMENTALIST { background-image: url('/assets/classic/images/class-icon/spiritmaster.png'); }
+.class-icon.ci-CLERIC       { background-image: url('/assets/classic/images/class-icon/priest.png'); }
+.class-icon.ci-CHANTER      { background-image: url('/assets/classic/images/class-icon/chanter.png'); }
+.class-icon.ci-WARRIOR      { background-image: url('/assets/classic/images/class-icon/gladiator.png'); }
+.class-icon.ci-SCOUT        { background-image: url('/assets/classic/images/class-icon/assassin.png'); }
+.class-icon.ci-MAGE         { background-image: url('/assets/classic/images/class-icon/sorcerer.png'); }
+.class-icon.ci-PRIEST       { background-image: url('/assets/classic/images/class-icon/priest.png'); }
+
+/* === COLUMN HINT TOOLTIPS === */
+.hint-th {
+    cursor: help;
+    border-bottom: 1px dotted rgba(255,255,255,0.35);
+}
+.hint-th::after {
+    content: "?";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: 700;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.5);
+    margin-left: 4px;
+    vertical-align: middle;
+}
+.hint-tooltip {
+    position: fixed;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* === SEARCH DROPDOWN === */
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #14141c;
+    border: 1px solid rgba(201, 170, 113, 0.25);
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    z-index: 200;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.search-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #d4d0c8;
+    border-bottom: 1px solid rgba(201, 170, 113, 0.06);
+    text-decoration: none;
+    font-size: 0.93em;
+}
+.search-dropdown a:hover {
+    background: rgba(201, 170, 113, 0.1);
+    text-decoration: none;
+}
+
+/* === DUNGEON FILTER INLINE === */
+.form-inline.mb-3 .col-md-2 {
+    width: auto;
+    float: none;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* === RESPONSIVE — TABLET (<=768px) === */
+
+@media (max-width: 768px) {
+    .ratings-container { padding: 0 0 30px; }
+
+    /* Rating table: hide less important columns */
+    .rating-table th:nth-child(4),
+    .rating-table td:nth-child(4),
+    .rating-table th:nth-child(8),
+    .rating-table td:nth-child(8),
+    .rating-table th:nth-child(12),
+    .rating-table td:nth-child(12) {
+        display: none;
+    }
+
+    /* Panel padding */
+    .panel-body { padding: 14px; }
+
+    /* SVG charts: constrain */
+    svg { max-width: 100%; height: auto; }
+
+    /* Stats grid: 3 columns on tablet */
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 8px;
+    }
+    .stat-value { font-size: 1.1em; }
+    .stats-footer { gap: 16px; font-size: 0.8em; }
+
+    /* Class stats: single column on tablet */
+    #classStatsContainer { grid-template-columns: 1fr; }
+    .class-stat-name { flex: 0 0 120px; font-size: 0.82em; }
+    .class-stat-detail { flex: 0 0 80px; font-size: 0.79em; }
+}
+
+/* === RESPONSIVE — PHONE (<=480px) === */
+
+@media (max-width: 480px) {
+    .ratings-container { padding: 0 0 20px; }
+
+    /* Rating table: hide more columns */
+    .rating-table th:nth-child(4),
+    .rating-table td:nth-child(4),
+    .rating-table th:nth-child(5),
+    .rating-table td:nth-child(5),
+    .rating-table th:nth-child(8),
+    .rating-table td:nth-child(8),
+    .rating-table th:nth-child(10),
+    .rating-table td:nth-child(10),
+    .rating-table th:nth-child(12),
+    .rating-table td:nth-child(12) {
+        display: none;
+    }
+
+    /* Stats grid: 2 columns on phone */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 6px;
+    }
+    .stat-item { padding: 10px 6px; }
+    .stat-value { font-size: 1em; }
+    .stats-footer { flex-direction: column; align-items: center; gap: 6px; }
+
+    /* Class stats: single column on phone */
+    #classStatsContainer { grid-template-columns: 1fr; }
+    .class-stat-name { flex: 0 0 110px; font-size: 0.82em; }
+    .class-stat-detail { flex: 0 0 auto; font-size: 0.79em; }
+
+    /* Panel padding */
+    .panel-body { padding: 10px; }
+}
+
+/* === LIGHT THEME OVERRIDES === */
+
+.light-theme {
+    --color-win: #2e7d32;
+    --color-loss: #c62828;
+    --color-draw: #e67e22;
+    --color-leave: #7a7f88;
+    --color-chart-line: #5a6abf;
+    --color-chart-grid: rgba(0,0,0,0.08);
+    --color-chart-text: #999;
+    --color-chart-bg: rgba(0,0,0,0.03);
+    --color-chart-text-light: #666;
+    --color-chart-text-dim: #888;
+    --color-card-border: rgba(100, 110, 140, 0.08);
+}
+
+.light-theme .panel {
+    background: #ffffff;
+    border-color: rgba(90, 106, 191, 0.10);
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+.light-theme .panel:hover {
+    border-color: rgba(90, 106, 191, 0.18);
+}
+
+.light-theme .rating-table thead th {
+    background: #f7f8fa;
+}
+
+.light-theme .stat-item {
+    background: rgba(0, 0, 0, 0.015);
+    border-color: rgba(90, 106, 191, 0.08);
+    border-radius: 8px;
+}
+.light-theme .stat-item:hover {
+    border-color: rgba(90, 106, 191, 0.18);
+}
+.light-theme .stat-value { color: #3a3f4a; }
+.light-theme .stat-label { color: #7a7f88; }
+
+.light-theme .stats-footer {
+    border-top-color: rgba(100, 110, 140, 0.06);
+    color: #7a7f88;
+}
+
+.light-theme .class-stat-name { color: #3a3f4a; }
+.light-theme .class-stat-bar-wrap { background: rgba(0, 0, 0, 0.05); }
+.light-theme .class-stat-pct { color: #3a3f4a; }
+.light-theme .class-stat-detail { color: #7a7f88; }
+
+.light-theme .search-dropdown {
+    background: #ffffff;
+    border-color: rgba(90, 106, 191, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.light-theme .search-dropdown a {
+    color: #2c2f36;
+    border-bottom-color: rgba(100, 110, 140, 0.05);
+}
+.light-theme .search-dropdown a:hover {
+    background: rgba(90, 106, 191, 0.04);
+}
+
+/* Keep hint tooltips dark for readability */
+.light-theme .hint-tooltip {
+    background: #2c2f36;
+    color: #f4f5f7;
+    border-color: rgba(30, 35, 50, 0.3);
+}
+
+/* Class icons: remove invert on light bg (icons are dark natively) */
+.light-theme .class-icon {
+    filter: none;
+}
+
+.position-label { color: #c9aa71; }
+.light-theme .position-label { color: #5a6abf; }
+
+/* Gold division label: #ffd700 is invisible on white — darken for light theme */
+.light-theme .div-badge[data-tier="3"] > span:last-child {
+    color: #b8860b !important;
+}
+
+.light-theme .hint-th {
+    border-bottom-color: rgba(30, 35, 50, 0.25);
+}
+.light-theme .hint-th::after {
+    background: rgba(0, 0, 0, 0.07);
+    color: rgba(0, 0, 0, 0.35);
+}

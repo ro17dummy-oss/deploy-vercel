@@ -1,0 +1,103 @@
+/* ============================================================
+   AION 2.0 — стили страницы загрузок (Загрузки.html)
+   Подключать ПОСЛЕ aion-core.css
+   ============================================================ */
+
+/* hero background — static image version */
+.hero-bg {
+  position: absolute; inset: 0; z-index: -2;
+  background: var(--bg-1) url("../assets/hero-bg.jpg") center 26% / cover no-repeat;
+}
+
+/* hero ledger — container entrance */
+.ledger { animation: rise 1s cubic-bezier(.16,.84,.44,1) .12s both; }
+
+/* ===================== DOWNLOADS PAGE ===================== */
+.btn-lg { padding: 17px 34px; font-size: 16px; }
+.btn-sm { padding: 9px 18px; font-size: 13.5px; }
+
+.dl-hero { position: relative; isolation: isolate; overflow: hidden; border-bottom: 1px solid var(--line); padding-bottom: clamp(64px, 8vw, 104px); }
+.dl-hero-bg { position: absolute; inset: 0; z-index: -2; background: var(--bg) url("../assets/advantages-bg.jpg") center 22% / cover no-repeat; }
+.dl-hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,8,9,0.82) 0%, rgba(10,8,9,0.74) 50%, var(--bg) 100%); }
+.dl-hero-inner {
+  position: relative; z-index: 1;
+  padding-top: clamp(124px, 16vh, 184px); padding-bottom: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(36px, 6vw, 80px); align-items: center;
+}
+.dl-lede .kicker { margin-bottom: 24px; }
+.dl-lede h1 { font-size: clamp(48px, 7vw, 92px); letter-spacing: 0.01em; line-height: 0.96; }
+.dl-lede h1 .accent { color: var(--accent); }
+.dl-lede .sub { margin-top: 24px; font-size: clamp(16px, 1.5vw, 19px); color: var(--muted); max-width: 48ch; line-height: 1.55; text-wrap: pretty; }
+.dl-cta { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 36px; }
+.dl-meta { font-family: var(--mono); font-size: 12.5px; color: var(--faint); letter-spacing: 0.04em; line-height: 1.5; }
+
+/* launcher window mockup */
+.dl-shot { animation: rise 1s cubic-bezier(.16,.84,.44,1) .1s both; }
+.shot-frame { border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden; background: var(--bg-2); box-shadow: 0 32px 80px -24px rgba(0,0,0,0.7); }
+.shot-bar { display: flex; align-items: center; gap: 7px; padding: 12px 15px; border-bottom: 1px solid var(--line); background: var(--bg-1); }
+.shot-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--faint); opacity: .55; }
+.shot-bar span:first-child { background: var(--accent); opacity: .8; }
+.shot-frame img { display: block; width: 100%; height: auto; }
+
+/* features grid reuses .adv-cell, 2 columns */
+.dl-features { grid-template-columns: repeat(2, 1fr); margin-top: 0; }
+
+/* compact perks strip inside the hero section */
+.dl-perks {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line-2);
+  margin-top: clamp(52px, 7vw, 84px);
+}
+.dl-perk {
+  padding: 30px clamp(22px, 2.2vw, 34px) 4px;
+  display: flex; flex-direction: column; gap: 13px;
+  border-right: 1px solid var(--line);
+}
+.dl-perk:first-child { padding-left: 0; }
+.dl-perk:last-child { border-right: 0; padding-right: 0; }
+.dl-perk .pico { width: 26px; height: 26px; color: var(--accent); }
+.dl-perk .pico svg { width: 100%; height: 100%; }
+.dl-perk h3 { font-family: var(--body); font-weight: 600; font-size: 17px; line-height: 1.28; letter-spacing: 0; }
+.dl-perk p { color: var(--muted); font-size: 14px; line-height: 1.52; text-wrap: pretty; }
+
+/* software table */
+.soft { background: var(--bg-1); border-top: 1px solid var(--line); }
+.soft-table { border: 1px solid var(--line-2); border-radius: 5px; overflow: hidden; }
+.soft-head, .soft-row { display: grid; grid-template-columns: 1.1fr 1.7fr 1.7fr auto; gap: clamp(18px, 2.4vw, 40px); align-items: center; }
+.soft-head { padding: 16px clamp(20px, 2.4vw, 34px); background: var(--bg-2); border-bottom: 1px solid var(--line-2); }
+.soft-head span { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); }
+.soft-row { padding: clamp(22px, 2.4vw, 30px) clamp(20px, 2.4vw, 34px); border-bottom: 1px solid var(--line); transition: background .25s ease; }
+.soft-row:last-child { border-bottom: 0; }
+.soft-row:hover { background: rgba(236,228,236,0.02); }
+.soft-name { display: flex; align-items: center; gap: 13px; }
+.soft-name .sig { width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border: 1px solid var(--accent-line); border-radius: 3px; color: var(--accent); }
+.soft-name .sig svg { width: 20px; height: 20px; }
+.soft-name b { font-family: var(--display); font-size: 21px; font-weight: 400; letter-spacing: 0.01em; }
+.soft-name .soft-sub { display: block; font-family: var(--mono); font-size: 11px; color: var(--faint); letter-spacing: 0.04em; margin-top: 2px; }
+.soft-row p { color: var(--muted); font-size: 14.5px; line-height: 1.55; text-wrap: pretty; }
+.soft-row .lbl { display: none; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+.soft-act { display: flex; justify-content: flex-end; }
+.soft-note { margin-top: 22px; font-family: var(--mono); font-size: 12.5px; color: var(--faint); line-height: 1.6; display: flex; align-items: flex-start; gap: 9px; }
+.soft-note svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--accent); margin-top: 1px; }
+
+@media (max-width: 1080px) {
+  .dl-hero-inner { grid-template-columns: 1fr; gap: 44px; }
+  .dl-shot { max-width: 560px; }
+  .dl-perks { grid-template-columns: repeat(2, 1fr); }
+  .dl-perk:nth-child(2) { border-right: 0; padding-right: 0; }
+  .dl-perk:nth-child(odd) { padding-left: 0; }
+  .dl-perk { border-bottom: 1px solid var(--line); padding-bottom: 30px; }
+  .dl-perk:nth-last-child(-n+2) { border-bottom: 0; }
+}
+@media (max-width: 860px) {
+  .dl-features { grid-template-columns: 1fr; }
+  .soft-head { display: none; }
+  .soft-row { grid-template-columns: 1fr; gap: 16px; padding: 26px clamp(20px, 5vw, 28px); }
+  .soft-row .lbl { display: block; }
+  .soft-act { justify-content: flex-start; }
+  .dl-perks { grid-template-columns: 1fr; }
+  .dl-perk, .dl-perk:nth-child(2) { border-right: 0; padding-right: 0; padding-left: 0; }
+  .dl-perk:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .dl-perk:last-child { border-bottom: 0; }
+}

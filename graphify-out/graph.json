@@ -1,0 +1,40 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "name": "Nox Aion 4.8 Multi-Page Frontend Framework Knowledge Graph",
+    "generated_at": "2026-10-29T11:58:00+07:00"
+  },
+  "nodes": [
+    { "id": "index.html", "label": "index.html (Beranda, Player Online Telemetry, News Gazette, Preview Marketplace & Rank)", "community": 0, "file_type": "code", "source_file": "index.html" },
+    { "id": "news.html", "label": "news.html (Portal News, Patch Notes 4.8 & Interactive Article Reader Modal)", "community": 0, "file_type": "code", "source_file": "news.html" },
+    { "id": "marketplace.html", "label": "marketplace.html (Etalase Publik Marketplace & Item Shop + Hover DB Tooltip)", "community": 0, "file_type": "code", "source_file": "marketplace.html" },
+    { "id": "prestige.html", "label": "prestige.html (Katalog Publik Prestige Pack Tier 1/2/3 & Perbandingan)", "community": 0, "file_type": "code", "source_file": "prestige.html" },
+    { "id": "ratings.html", "label": "ratings.html (Abyss GP/AP & PvP Rank List Page)", "community": 0, "file_type": "code", "source_file": "ratings.html" },
+    { "id": "register.html", "label": "register.html (Halaman Pembuatan Akun + Live SHA-1 Base64 Preview)", "community": 0, "file_type": "code", "source_file": "register.html" },
+    { "id": "account.html", "label": "account.html (Profile Panel Daeva + Login + Unstuck + Credit Wallet)", "community": 0, "file_type": "code", "source_file": "account.html" },
+    { "id": "nox-app.js", "label": "nox-app.js (Multi-Page State Engine: Theme Switcher, Auth Guard, Credit, News, Marketplace, Prestige, Ratings)", "community": 1, "file_type": "code", "source_file": "assets/aion20/nox-app.js" },
+    { "id": "nox-custom-theme.css", "label": "nox-custom-theme.css (Original Nox Aion Signature Design System: Aether / Sanctum / Balaur)", "community": 2, "file_type": "code", "source_file": "assets/aion20/styles/nox-custom-theme.css" },
+    { "id": "nox-modules.css", "label": "nox-modules.css (Subpage Hero, News Portal, Marketplace, Prestige, Ratings, Auth & Profile Panel Styles)", "community": 2, "file_type": "code", "source_file": "assets/aion20/styles/nox-modules.css" },
+    { "id": "db_al_server_ls", "label": "MySQL al_server_ls (account_data: name, password SHA1-Base64, toll, membership)", "community": 3, "file_type": "document", "source_file": "design-system/nox-aion/MASTER.md" },
+    { "id": "db_al_server_gs", "label": "MySQL al_server_gs (players, abyss_rank, account_rewards, broker)", "community": 3, "file_type": "document", "source_file": "design-system/nox-aion/MASTER.md" }
+  ],
+  "links": [
+    { "source": "index.html", "target": "nox-app.js", "relation": "loads_script", "confidence": "EXTRACTED" },
+    { "source": "news.html", "target": "nox-app.js", "relation": "loads_script", "confidence": "EXTRACTED" },
+    { "source": "marketplace.html", "target": "nox-app.js", "relation": "loads_script", "confidence": "EXTRACTED" },
+    { "source": "prestige.html", "target": "nox-app.js", "relation": "loads_script", "confidence": "EXTRACTED" },
+    { "source": "ratings.html", "target": "nox-app.js", "relation": "loads_script", "confidence": "EXTRACTED" },
+    { "source": "register.html", "target": "nox-app.js", "relation": "loads_script", "confidence": "EXTRACTED" },
+    { "source": "account.html", "target": "nox-app.js", "relation": "loads_script", "confidence": "EXTRACTED" },
+    { "source": "index.html", "target": "nox-custom-theme.css", "relation": "applies_signature_style", "confidence": "EXTRACTED" },
+    { "source": "news.html", "target": "nox-custom-theme.css", "relation": "applies_signature_style", "confidence": "EXTRACTED" },
+    { "source": "marketplace.html", "target": "nox-custom-theme.css", "relation": "applies_signature_style", "confidence": "EXTRACTED" },
+    { "source": "prestige.html", "target": "nox-custom-theme.css", "relation": "applies_signature_style", "confidence": "EXTRACTED" },
+    { "source": "ratings.html", "target": "nox-custom-theme.css", "relation": "applies_signature_style", "confidence": "EXTRACTED" },
+    { "source": "register.html", "target": "nox-custom-theme.css", "relation": "applies_signature_style", "confidence": "EXTRACTED" },
+    { "source": "account.html", "target": "nox-custom-theme.css", "relation": "applies_signature_style", "confidence": "EXTRACTED" },
+    { "source": "nox-app.js", "target": "db_al_server_ls", "relation": "maps_contract_to", "confidence": "EXTRACTED" },
+    { "source": "nox-app.js", "target": "db_al_server_gs", "relation": "maps_contract_to", "confidence": "EXTRACTED" }
+  ]
+}

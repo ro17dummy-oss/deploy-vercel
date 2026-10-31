@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Nox Aion 4.8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News, Patch Notes &amp; Event Atreia | NOX AION 4.8</title>
+  <meta name="description" content="Berita resmi Nox Aion 4.8: Patch Notes Upheaval, Jadwal Fortress Siege Kaldor & Pangaea, Promo Credit, dan Panduan Daeva." />
+  <link rel="icon" type="image/png" href="assets/aion20/assets/nox-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/aion20/styles/aion-core.css" />
+  <link rel="stylesheet" href="assets/aion20/styles/home.css" />
+  <link rel="stylesheet" href="assets/aion20/styles/nox-modules.css" />
+</head>
+<body>
+
+<header class="site-header scrolled" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="NOX AION">
+      <img src="assets/aion20/assets/nox-logo.png" alt="Logo Nox Aion" />
+      <span class="wm">NOX AION</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="prestige.html">Prestige Pack</a></li>
+      <li><a href="ratings.html">Rank List</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang" id="lang">
+        <button type="button" class="lang-btn" id="langBtn" aria-expanded="false" aria-label="Select Language">
+          <span id="currentLangCode">EN</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" role="menu">
+          <button type="button" class="active" data-set-lang="en"><span>English</span><span class="code">EN</span></button>
+          <button type="button" data-set-lang="id"><span>Bahasa</span><span class="code">ID</span></button>
+          <button type="button" data-set-lang="ph"><span>Filipino</span><span class="code">PH</span></button>
+        </div>
+      </div>
+
+      <a class="register-nav-btn" id="headerRegisterBtn" href="register.html">Daftar Akun</a>
+
+      <a class="login-btn" href="account.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span id="headerAccountTxt">Masuk Akun</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Buka Menu Navigasi"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Beranda</a>
+  <a href="news.html">News &amp; Patch Notes</a>
+  <a href="marketplace.html">Marketplace</a>
+  <a href="prestige.html">Prestige Pack</a>
+  <a href="ratings.html">Rank List</a>
+  <a href="register.html">Buat Akun Baru (Register)</a>
+  <a href="account.html">Profile Panel / Login</a>
+</nav>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="wrap page-hero-head">
+    <div>
+      <span class="kicker">Warta Resmi Atreia · Patch Notes &amp; Event</span>
+      <h1>News &amp; <span class="accent">Kronik 4.8</span></h1>
+      <p class="sub">Ikuti pengumuman pembaruan server, jadwal pertempuran Fortress Siege Kaldor &amp; Pangaea, panduan instance, serta event komunitas terbaru.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWS PORTAL CONTENT ===================== -->
+<section class="section-pad" style="padding-top:44px;">
+  <div class="wrap">
+
+    <div class="filter-bar">
+      <div class="filter-tabs" role="tablist" aria-label="Kategori Berita">
+        <button type="button" class="filter-btn active" data-news-cat="all">Semua Berita</button>
+        <button type="button" class="filter-btn" data-news-cat="update">Update &amp; Patch 4.8</button>
+        <button type="button" class="filter-btn" data-news-cat="pvp">Siege &amp; PvP</button>
+        <button type="button" class="filter-btn" data-news-cat="event">Promo &amp; Event</button>
+        <button type="button" class="filter-btn" data-news-cat="guide">Panduan Daeva</button>
+      </div>
+
+      <div class="filter-search">
+        <input type="search" id="newsSearchInput" class="input-field" placeholder="Cari judul berita atau patch note..." aria-label="Cari Berita" />
+      </div>
+    </div>
+
+    <div class="news-cards-grid" id="newsGrid">
+      <!-- Dirender oleh nox-app.js -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="margin-top:0;">
+      <span class="disclaimer">© 2026 Nox Aion 4.8 Community Server.</span>
+      <a href="index.html" style="color:var(--accent);">← Kembali ke Beranda</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL ARTIKEL BERITA LENGKAP -->
+<div class="nox-modal-backdrop" id="newsArticleModal" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle" aria-hidden="true">
+  <div class="nox-modal" style="max-width:680px;">
+    <button type="button" class="modal-close" data-close-modal="newsArticleModal" aria-label="Tutup Artikel">✕</button>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+      <span id="newsModalTag" class="tag update">Patch 4.8</span>
+      <span class="dot-sep"></span>
+      <span id="newsModalDate" class="date">29.10.2026</span>
+    </div>
+    <h3 id="newsModalTitle" style="font-size:clamp(24px,3vw,34px);line-height:1.1;margin-bottom:18px;">Judul Artikel</h3>
+    <div style="width:100%;aspect-ratio:16/9;border-radius:4px;overflow:hidden;border:1px solid var(--line-2);margin-bottom:20px;">
+      <img id="newsModalImg" src="assets/aion20/assets/hero-bg.jpg" alt="" style="width:100%;height:100%;object-fit:cover;" />
+    </div>
+    <div id="newsModalBody" class="news-article-content"></div>
+  </div>
+</div>
+
+<!-- MODAL TOP UP CREDIT -->
+<div class="nox-modal-backdrop" id="topupModal" role="dialog" aria-modal="true" aria-labelledby="topupModalTitle" aria-hidden="true">
+  <div class="nox-modal">
+    <button type="button" class="modal-close" data-close-modal="topupModal" aria-label="Tutup Jendela">✕</button>
+    <span class="kicker" style="margin-bottom:8px;">Sinkronisasi al_server_ls.account_data.toll</span>
+    <h3 id="topupModalTitle" style="font-size:28px;margin-bottom:18px;">Isi Ulang <span style="color:var(--gold);">Credit (Toll)</span></h3>
+    <form id="topupForm" class="form-stack">
+      <div class="topup-packages">
+        <button type="button" class="topup-Option" data-topup-amt="500"><span class="credit-amt">500 Credit</span><span class="idr-price">Rp 50.000 · Instan</span></button>
+        <button type="button" class="topup-Option selected" data-topup-amt="1250"><span class="credit-amt">1.250 Credit</span><span class="idr-price">Rp 100.000 · Bonus +250</span></button>
+        <button type="button" class="topup-Option" data-topup-amt="2750"><span class="credit-amt">2.750 Credit</span><span class="idr-price">Rp 200.000 · Bonus +750</span></button>
+        <button type="button" class="topup-Option" data-topup-amt="6000"><span class="credit-amt">6.000 Credit</span><span class="idr-price">Rp 400.000 · Bonus +2.000</span></button>
+      </div>
+      <div class="form-group">
+        <label for="topupMethod">Metode Pembayaran Otomatis</label>
+        <select id="topupMethod" class="input-field">
+          <option value="QRIS Instant">QRIS (Semua E-Wallet &amp; Mobile Banking)</option>
+          <option value="BCA Virtual Account">BCA Virtual Account</option>
+          <option value="Mandiri Virtual Account">Mandiri Virtual Account</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Konfirmasi Top Up Sekarang</button>
+    </form>
+  </div>
+</div>
+
+<aside class="access-toast" id="access-toast" role="status" aria-live="polite">
+  <button type="button" class="toast-close" aria-label="Tutup Notifikasi">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="toast-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg>
+  </div>
+  <div class="toast-body">
+    <h4>Sistem Nox Aion 4.8</h4>
+    <p id="toastMessageText"></p>
+  </div>
+</aside>
+
+<script src="assets/aion20/home.js"></script>
+<script src="assets/aion20/nox-app.js"></script>
+</body>
+</html>

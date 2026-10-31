@@ -1,0 +1,990 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+
+
+
+
+
+
+
+
+
+<!-- META TAGS -->
+<meta charset="utf-8">
+<meta name="author" content="AionEmpire">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>AION 2.0 — классический сервер Атреи | AionEmpire</title>
+<meta name="description" content="Играйте в AION 2.0 Classic — оригинальный баланс, осады Абисса и настоящая Атрея. Тысячи игроков онлайн. Без pay-to-win и вайпов.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aionempire.com/"/>
+<link rel="shortcut icon" href="/assets/classic/images/ae.ico?v=1792438404"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AionEmpire">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="AION 2.0 — классический сервер Атреи | AionEmpire">
+<meta property="og:description" content="Играйте в AION 2.0 Classic — оригинальный баланс, осады Абисса и настоящая Атрея. Тысячи игроков онлайн. Без pay-to-win и вайпов.">
+<meta property="og:url" content="https://aionempire.com/">
+<meta property="og:image" content="https://aionempire.com/assets/aion20/assets/hero-bg.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AION 2.0 — классический сервер Атреи | AionEmpire">
+<meta name="twitter:description" content="Играйте в AION 2.0 Classic — оригинальный баланс, осады Абисса и настоящая Атрея. Тысячи игроков онлайн. Без pay-to-win и вайпов.">
+<meta name="twitter:image" content="https://aionempire.com/assets/aion20/assets/hero-bg.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/aion20/styles/aion-core.css?v=1792438404" />
+<link rel="stylesheet" href="/assets/aion20/styles/home.css?v=1792438404" />
+</head>
+<body>
+
+<!-- ===================== PRELOADER ===================== -->
+<div class="preloader" id="preloader" role="status" aria-label="Загрузка" data-welcome="Добро пожаловать">
+  <div class="pre-inner">
+    <div class="pre-wm">AION <b>2.0</b></div>
+    <div class="pre-bar"><span id="pre-fill"></span></div>
+    <div class="pre-status" id="pre-status">Подготовка Атреи…</div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+
+
+
+<header class="site-header" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="AION 2.0">
+      <img src="/assets/aion20/assets/logo.png" alt="" />
+      <span class="wm">AION <b>2.0</b></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/" class="active">Главная</a></li>
+      <li><a href="/downloads" class="">Загрузки</a></li>
+      <li><a href="/ratings" class="">Рейтинги</a></li>
+      <li><a href="https://kb.aionempire.com" target="_blank" rel="noopener">База знаний</a></li>
+      
+      <li><a href="https://support.aionempire.com" target="_blank" rel="noopener">Поддержка</a></li>
+    </ul>
+
+    <div class="nav-right">
+      
+        
+          <span class="online" title="Онлайн">
+            <span class="dot"></span>
+            
+          </span>
+        
+      
+
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Выбор языка">
+          <span class="lang-cur">RU</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" role="menu">
+          <a href="/lang" role="menuitem" class="active"><span>Русский</span><span class="code">RU</span></a>
+          <a href="/lang?lang=en" role="menuitem" class=""><span>English</span><span class="code">EN</span></a>
+          <a href="/lang?lang=cn" role="menuitem" class=""><span>中文</span><span class="code">ZH</span></a>
+        </div>
+      </div>
+
+      <a class="login-btn" href="/account/index">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Кабинет</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="/">Главная</a>
+  <a href="/downloads">Загрузки</a>
+  <a href="/ratings">Рейтинги</a>
+  <a href="https://kb.aionempire.com" target="_blank" rel="noopener">База знаний</a>
+  
+  <a href="https://support.aionempire.com" target="_blank" rel="noopener">Поддержка</a>
+  <a href="/account/index">Личный кабинет</a>
+</nav>
+
+
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top" data-screen-label="Hero">
+  <video class="hero-bg" autoplay muted loop playsinline poster="/assets/aion20/assets/hero-bg.jpg" aria-label="Atreia">
+    <source src="/assets/aion20/assets/hero-bg.webm" type="video/webm" />
+  </video>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-inner">
+    <div class="hero-lede">
+      
+        <span class="kicker" id="hero-kicker">Классический сервер / Версия 2.0</span>
+      
+      <h1>AION <span class="v">2.0</span></h1>
+      <div class="hero-version"><span class="hv-line" aria-hidden="true"></span>Assault on Balaurea</div>
+      
+        <p class="sub" id="hero-sub">LIVE 2.0. Возвращение настоящей Атреи. Баланс, осады и Абисс.</p>
+      
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/downloads">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+          Скачать лаунчер
+        </a>
+        <span class="hero-sep" aria-hidden="true"></span>
+        <div class="hero-socials">
+          <a class="social-btn" href="https://discord.gg/MYbkKRVcQs" target="_blank" rel="noopener" aria-label="Discord" title="Discord">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+          </a>
+          <a class="social-btn" href="https://t.me/aionempire" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.66 18.6 20.4c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.43 2.34c-.27.27-.5.5-1 .5l.36-5.1 9.27-8.38c.4-.36-.09-.56-.62-.2L5.78 13.05.85 11.5c-1.07-.34-1.1-1.07.22-1.58L20.55 3.3c.9-.33 1.68.2 1.39 1.36Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div class="ledger" aria-label="Ключевые факты сервера">
+      
+      
+        <div class="ledger-row">
+          <span class="k">Онлайн</span>
+          <span class="v">
+            
+              
+                <span class="st-dot" title="Онлайн" aria-label="Онлайн" role="img"></span>
+              
+            
+          </span>
+        </div>
+      
+      <div class="ledger-row"><span class="k">Версия</span><span class="v">2.0 Classic</span></div>
+      <div class="ledger-row"><span class="k">Вайпы</span><span class="v">никогда</span></div>
+      <div class="ledger-row"><span class="k">Регион</span><span class="v">RU · UA · EU</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWS (live feed: news.aionempire.com) ===================== -->
+
+<section class="news section-pad" id="news" data-screen-label="News">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="tg">
+        <h2>Последние <span class="accent">новости</span></h2>
+      </div>
+      <a class="section-link" href="https://kb.aionempire.com/" target="_blank" rel="noopener">
+        Все записи
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="news-grid reveal">
+      
+        <a class="feature" href="https://kb.aionempire.com/post/koleso-udachi-13" target="_blank" rel="noopener">
+          <div class="ph"><img src="https://news.aionempire.com/storage/app/uploads/public/6ad/238/667/6ad238667057f787986620.jpg" alt="" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="meta">
+            <span class="tag community">Новости сервера</span><span class="dot-sep"></span>
+            <span class="date">16.10.2026</span>
+          </div>
+          <h3>🎃 Колесо Удачи #13</h3>
+          <p>В честь дня рождения сервера мы решили собрать особенное Колесо удачи — заметно насыщеннее обычного и с наградами, которые многие могли пропустить...</p>
+          <span class="more">Читать полностью
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+      
+
+      <div class="news-list">
+        
+          
+            <a class="news-item" href="https://kb.aionempire.com/post/novye-sistemy-aion-empire" target="_blank" rel="noopener">
+              <div class="it-meta"><span class="tag community">Новости сервера</span><span class="dot-sep"></span><span class="date">10.10.2026</span></div>
+              <h4>🚀 Новые системы Aion Empire</h4>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          
+        
+          
+            <a class="news-item" href="https://kb.aionempire.com/post/s-dnyom-rozhdeniya-aionempire-1-god" target="_blank" rel="noopener">
+              <div class="it-meta"><span class="tag community">Новости сервера</span><span class="dot-sep"></span><span class="date">10.10.2026</span></div>
+              <h4>🥳 С ДНЁМ РОЖДЕНИЯ #AIONEMPIRE!</h4>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          
+        
+          
+            <a class="news-item" href="https://kb.aionempire.com/post/start-novogo-sezona-batlpassa-13" target="_blank" rel="noopener">
+              <div class="it-meta"><span class="tag community">Новости сервера</span><span class="dot-sep"></span><span class="date">09.10.2026</span></div>
+              <h4>🚀 Старт нового сезона Батлпасса #13</h4>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          
+        
+          
+            <a class="news-item" href="https://kb.aionempire.com/post/ivent-za-granyu-illyuzij" target="_blank" rel="noopener">
+              <div class="it-meta"><span class="tag community">Новости сервера</span><span class="dot-sep"></span><span class="date">09.10.2026</span></div>
+              <h4>🧩 [Ивент] За гранью иллюзий</h4>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== ADVANTAGES ===================== -->
+<section class="adv section-pad" id="advantages" data-screen-label="About">
+  <div class="adv-bg"></div>
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom: 0;">
+      <div class="tg adv-intro">
+        <span class="idx">Почему именно 2.0</span>
+        <h2>Что отличает <span class="accent">наш сервер</span></h2>
+        <p>Без pay-to-win, без искусственной инфляции уровней и без игнорирования обращений. Только классическая версия Aion и команда, которая выполняет свои обязательства.</p>
+      </div>
+    </div>
+
+    <div class="adv-list reveal">
+      <div class="adv-cell">
+        <span class="sig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg></span>
+        <h3>Классическая версия 2.0</h3>
+        <p>Тот самый Aion: оригинальный баланс классов, карта Абисса и крепости до бесконечных переработок. Без скачков уровней и pay-to-win — играют навык и легион.</p>
+      </div>
+
+      <div class="adv-cell">
+        <span class="sig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg></span>
+        <h3>Большой онлайн</h3>
+        <p>Мы сформировали вокруг себя огромное сообщество игроков, которое постоянно растёт и привлекает всё новых и новых людей. Онлайн держится стабильно в любое время суток.</p>
+      </div>
+
+      <div class="adv-cell" id="ratings">
+        <span class="sig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4v11h2V9ZM14 4h-2v16h2V4ZM22 13h-2v7h2v-7Z"/><path d="M2 20h20"/><path d="m5 6 4-3 4 3 6-4"/></svg></span>
+        <h3>Система рейтингов</h3>
+        <p>Мощная система PvP-сражений, рейтингов и сезонов, открывающая игрокам каждый раз всё больше новшеств — от персональных рангов до сезонных наград за вершину таблицы.</p>
+        <a class="adv-more" href="/ratings">Подробности
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="adv-cell">
+        <span class="sig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v4h-4"/></svg></span>
+        <h3>Постоянные обновления</h3>
+        <p>Мы ежедневно продолжаем работу над сервером, улучшая и расширяя контент, чтобы соответствовать ожиданиям всех игроков. Поддержка развития сервера — наш приоритет.</p>
+      </div>
+
+      <div class="adv-cell">
+        <span class="sig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="6" rx="1.5"/><rect x="2" y="11" width="20" height="6" rx="1.5"/><path d="M6 6h.01M6 14h.01"/><path d="M9 21h6M12 17v4"/></svg></span>
+        <h3>Развитая инфраструктура</h3>
+        <p>К вашим услугам не только игровой сервер, но и множество дополнительных сервисов — современный игровой лаунчер, база знаний, быстрая поддержка и прочее.</p>
+      </div>
+
+      <div class="adv-cell adv-cta">
+        <span class="q">Готов вернуться<br />в <b>настоящую Атрею?</b></span>
+        <a href="/account/index">Создать аккаунт
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== JOIN BAND ===================== -->
+<section class="join" id="join" data-screen-label="Community">
+  <div class="wrap join-inner reveal">
+    <h2>Атрея ждёт <span class="accent">своих героев</span></h2>
+    <div class="right">
+      <a class="btn btn-primary" href="/account/index">
+        Создать аккаунт
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <span class="note">Регистрация — 1 минута · стартовый набор героя в подарок</span>
+      <div class="socials">
+        <a class="social-btn" href="https://discord.gg/MYbkKRVcQs" target="_blank" rel="noopener" aria-label="Discord" title="Discord">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+        </a>
+        <a class="social-btn" href="https://t.me/aionempire" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.66 18.6 20.4c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.43 2.34c-.27.27-.5.5-1 .5l.36-5.1 9.27-8.38c.4-.36-.09-.56-.62-.2L5.78 13.05.85 11.5c-1.07-.34-1.1-1.07.22-1.58L20.55 3.3c.9-.33 1.68.2 1.39 1.36Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap bonuses reveal">
+    <div class="bonuses-bar">
+      <span class="b-label">Бонусы для новых игроков</span>
+      <span class="b-hint">награды за создание персонажа и достижение новых уровней</span>
+    </div>
+    <div class="reel">
+      <div class="reel-track">
+        
+        
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/1.jpg" alt="Оружие новичка" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 10+</span> 
+              </div>
+              <span class="b-name">Оружие новичка</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/2.jpg" alt="Сапоги Тахабаты" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">30 дн</span> 
+              </div>
+              <span class="b-name">Сапоги Тахабаты</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/3.jpg" alt="Крылья Тахабаты" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">30 дн</span> 
+              </div>
+              <span class="b-name">Крылья Тахабаты</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/4.jpg" alt="Броня Даэваниона" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 30+</span> 
+              </div>
+              <span class="b-name">Броня Даэваниона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/5.jpg" alt="Серьга декуриона" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×2</span> 
+              </div>
+              <span class="b-name">Серьга декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/6.jpg" alt="Кольцо декуриона" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×2</span> 
+              </div>
+              <span class="b-name">Кольцо декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/7.jpg" alt="Ожерелье декуриона" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 10+</span> 
+              </div>
+              <span class="b-name">Ожерелье декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/8.jpg" alt="Пояс декуриона" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 10+</span> 
+              </div>
+              <span class="b-name">Пояс декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/9.jpg" alt="Зелье восстановления I" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×25</span> 
+              </div>
+              <span class="b-name">Зелье восстановления I</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/10.jpg" alt="Клубничный коктейль со льдом" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×10</span> 
+              </div>
+              <span class="b-name">Клубничный коктейль со льдом</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/11.jpg" alt="Свиток ускорения III" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Свиток ускорения III</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/12.jpg" alt="Свиток отваги III" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Свиток отваги III</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/13.jpg" alt="Свиток перерождения III" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Свиток перерождения III</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/14.jpg" alt="Редкое зелье восстановления IV" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Редкое зелье восстановления IV</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/15.jpg" alt="Льготы управляющего" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">3 дня</span> 
+              </div>
+              <span class="b-name">Льготы управляющего</span>
+              <span class="b-sub">Ур. 10–15</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/16.jpg" alt="Эмбрион розового кюда" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">3 дня</span> 
+              </div>
+              <span class="b-name">Эмбрион розового кюда</span>
+              <span class="b-sub">Ур. 10–15</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/17.jpg" alt="Кусок торта" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×10</span> 
+              </div>
+              <span class="b-name">Кусок торта</span>
+              <span class="b-sub">Ур. 10–15</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/18.jpg" alt="Надгробие возрождения" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×3</span> 
+              </div>
+              <span class="b-name">Надгробие возрождения</span>
+              <span class="b-sub">Ур. 15–20</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/19.jpg" alt="Кусок торта" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×10</span> 
+              </div>
+              <span class="b-name">Кусок торта</span>
+              <span class="b-sub">Ур. 15–20</span>
+            </div>
+          
+            <div class="bonus-card">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/20.jpg" alt="Свиток входа в Харамель" style="width:100%;height:100%;object-fit:cover" />
+                
+              </div>
+              <span class="b-name">Свиток входа в Харамель</span>
+              <span class="b-sub">Ур. 15–20</span>
+            </div>
+          
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/1.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 10+</span> 
+              </div>
+              <span class="b-name">Оружие новичка</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/2.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">30 дн</span> 
+              </div>
+              <span class="b-name">Сапоги Тахабаты</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/3.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">30 дн</span> 
+              </div>
+              <span class="b-name">Крылья Тахабаты</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/4.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 30+</span> 
+              </div>
+              <span class="b-name">Броня Даэваниона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/5.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×2</span> 
+              </div>
+              <span class="b-name">Серьга декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/6.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×2</span> 
+              </div>
+              <span class="b-name">Кольцо декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/7.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 10+</span> 
+              </div>
+              <span class="b-name">Ожерелье декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/8.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">ур. 10+</span> 
+              </div>
+              <span class="b-name">Пояс декуриона</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/9.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×25</span> 
+              </div>
+              <span class="b-name">Зелье восстановления I</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/10.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×10</span> 
+              </div>
+              <span class="b-name">Клубничный коктейль со льдом</span>
+              <span class="b-sub">Создание</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/11.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Свиток ускорения III</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/12.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Свиток отваги III</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/13.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Свиток перерождения III</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/14.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×20</span> 
+              </div>
+              <span class="b-name">Редкое зелье восстановления IV</span>
+              <span class="b-sub">Ур. 1–10</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/15.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">3 дня</span> 
+              </div>
+              <span class="b-name">Льготы управляющего</span>
+              <span class="b-sub">Ур. 10–15</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/16.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">3 дня</span> 
+              </div>
+              <span class="b-name">Эмбрион розового кюда</span>
+              <span class="b-sub">Ур. 10–15</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/17.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×10</span> 
+              </div>
+              <span class="b-name">Кусок торта</span>
+              <span class="b-sub">Ур. 10–15</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/18.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×3</span> 
+              </div>
+              <span class="b-name">Надгробие возрождения</span>
+              <span class="b-sub">Ур. 15–20</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/19.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                 <span class="bonus-qty">×10</span> 
+              </div>
+              <span class="b-name">Кусок торта</span>
+              <span class="b-sub">Ур. 15–20</span>
+            </div>
+          
+            <div class="bonus-card" aria-hidden="true">
+              <div class="bonus-icon">
+                <img src="/assets/aion20/assets/items/20.jpg" alt="" style="width:100%;height:100%;object-fit:cover" />
+                
+              </div>
+              <span class="b-name">Свиток входа в Харамель</span>
+              <span class="b-sub">Ур. 15–20</span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+
+
+<footer class="site-footer" id="support">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="wm">AION <b>2.0</b></div>
+        <p>Фанатский проект, посвящённый классической версии 2.0. Создан игроками — для игроков, во имя возвращения настоящей Атреи.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="/aion20">Главная</a></li>
+          <li><a href="/downloads">Загрузки</a></li>
+          <li><a href="/aion20#advantages">О сервере</a></li>
+          <li><a href="/account/index">Личный кабинет</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Сообщество</h4>
+        <ul>
+          <li><a href="https://discord.gg/MYbkKRVcQs" target="_blank" rel="noopener">Discord-сервер</a></li>
+          <li><a href="https://t.me/aionempire" target="_blank" rel="noopener">Telegram-канал</a></li>
+          <li><a href="https://kb.aionempire.com" target="_blank" rel="noopener">База знаний</a></li>
+          <li><a href="/aion20#advantages">О версии 2.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="footer-legal">
+      <li><a href="https://forum.aionempire.com/topic/1977-%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8/" target="_blank" rel="noopener">Политика конфиденциальности</a></li>
+      <li><a href="https://forum.aionempire.com/topic/6031-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5-%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B5general-provisions/" target="_blank" rel="noopener">Пользовательское соглашение</a></li>
+      <li><a href="https://forum.aionempire.com/topic/6033-credit-card-security-policy/" target="_blank" rel="noopener">Политика безопасности кредитных карт</a></li>
+    </ul>
+    <div class="footer-bottom">
+      <p class="disclaimer">© 2026 AION 2.0 — фанатский некоммерческий проект. Не аффилирован с NCSOFT Corporation. AION® является торговой маркой NCSOFT. Все права на игру принадлежат правообладателю.</p>
+      <p>Сделано сообществом</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/assets/aion20/home.js?v=1792438404"></script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T23R67N7');</script>
+        <!-- End Google Tag Manager -->
+
+            <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T23R67N7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
+
+        <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+            (function(m,e,t,r,i,k,a){
+                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+            ym(96425997, 'init', {webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/96425997" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+
+
+
+
+
+
+
+<!-- Chrome / Firefox Extension Popup -->
+<div id="chromeExtPopup" class="cep-wrap" style="display:none;" role="dialog" aria-label="Browser extension suggestion">
+    <div class="cep-noise"></div>
+    <button class="cep-close" id="chromeExtClose" aria-label="Close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M9 1L1 9M1 1l8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="cep-top">
+        <div class="cep-shield">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.5)" stroke-width="1.2"/>
+                <path d="M8 12l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="cep-label">Проблемы с доступом?</div>
+    </div>
+    <p class="cep-desc">Наше бесплатное расширение для Chrome обходит региональные ограничения и восстанавливает доступ.</p>
+    <a href="#" class="cep-btn" id="chromeExtInstall" target="_blank" rel="nofollow">
+        <span id="cepBtnIcon"></span>
+        <span id="cepBtnText"></span>
+        <svg class="cep-arrow" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+    </a>
+    <button class="cep-dismiss" id="chromeExtDismiss">Мне это не нужно</button>
+</div>
+
+<style>
+    .cep-wrap {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 300px;
+        background: linear-gradient(160deg, #1c1f2e 0%, #161824 100%);
+        border-radius: 18px;
+        border: 1px solid rgba(255,255,255,0.18);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 80px rgba(66,133,244,0.15);
+        padding: 20px 20px 16px;
+        z-index: 9999;
+        flex-direction: column;
+        gap: 0;
+        overflow: hidden;
+        animation: cepIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .cep-noise {
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(135deg, rgba(66,133,244,0.08) 0%, transparent 60%);
+        pointer-events: none;
+    }
+    @keyframes cepIn {
+        from { opacity: 0; transform: translateY(16px) scale(0.97); }
+        to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .cep-wrap.cep-hiding {
+        animation: cepOut 0.22s ease-in forwards;
+    }
+    @keyframes cepOut {
+        to { opacity: 0; transform: translateY(10px) scale(0.97); }
+    }
+    .cep-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.07);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,0.4);
+        transition: background 0.15s, color 0.15s;
+        padding: 0;
+        z-index: 1;
+    }
+    .cep-close:hover { background: rgba(255,255,255,0.14); color: #fff; }
+    .cep-top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    .cep-shield {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(66,133,244,0.2), rgba(52,168,83,0.15));
+        border: 1px solid rgba(255,255,255,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .cep-label {
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(255,255,255,0.85);
+    }
+    .cep-title {
+        margin: 0 0 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+    .cep-desc {
+        margin: 0 0 16px;
+        font-size: 12.5px;
+        color: rgba(255,255,255,0.65);
+        line-height: 1.6;
+    }
+    .cep-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        padding: 11px 16px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.22);
+        border-radius: 10px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.18s, border-color 0.18s, transform 0.15s;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 8px;
+    }
+    .cep-btn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(66,133,244,0.2) 0%, rgba(52,168,83,0.15) 100%);
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .cep-btn:hover { background: rgba(255,255,255,0.17); border-color: rgba(255,255,255,0.35); transform: translateY(-1px); }
+    .cep-btn:hover::before { opacity: 1; }
+    .cep-arrow { margin-left: auto; opacity: 0.6; }
+    .cep-dismiss {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: none;
+        border: none;
+        color: rgba(255,255,255,0.38);
+        font-size: 11.5px;
+        cursor: pointer;
+        padding: 4px 0 0;
+        transition: color 0.15s;
+    }
+    .cep-dismiss:hover { color: rgba(255,255,255,0.65); }
+    @media (max-width: 420px) {
+        .cep-wrap { bottom: 0; right: 0; left: 0; width: auto; border-radius: 18px 18px 0 0; }
+    }
+</style>
+<script>
+(function() {
+    var isAdmin =  false ;
+    var isRussia =  false ;
+    var ua = navigator.userAgent;
+    var isFirefox = /Firefox\//.test(ua);
+    var isChrome = /Chrome\//.test(ua) && !/Edg\/|OPR\/|Brave\//.test(ua);
+    var isSupportedBrowser = isChrome || isFirefox;
+    if (!isAdmin && !(isSupportedBrowser && isRussia)) return;
+    var chromeUrl = 'https://chromewebstore.google.com/detail/aionempire-proxy/ahfbbflenihonhccnibkdepncldndalf?pli=1';
+    var firefoxUrl = 'https://addons.mozilla.org/ru/firefox/addon/aionempire-proxy/';
+    var chromeSvg = '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 1 8.66 5H12V2z" fill="#EA4335"/><path d="M20.66 7A10 10 0 0 1 16 19.46L12 12l8.66-5z" fill="#FBBC05"/><path d="M15.54 19.8A10 10 0 0 1 3.34 7H12l3.54 12.8z" fill="#34A853"/><circle cx="12" cy="12" r="4" fill="white"/><circle cx="12" cy="12" r="2.5" fill="#4285F4"/></svg>';
+    var firefoxSvg = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#FF6611"/><path d="M17.5 8.5c-.5-1.5-1.8-2.5-3.5-2.5-2 0-3.5 1.5-3.5 3.5 0 1.2.6 2.2 1.5 2.8L10 16h4l-1-2.5c1.7-.5 3-2 3-3.8 0-.4-.05-.8-.15-1.1l1.65-.1z" fill="white" opacity="0.9"/></svg>';
+    var btnEl = document.getElementById('chromeExtInstall');
+    var iconEl = document.getElementById('cepBtnIcon');
+    var textEl = document.getElementById('cepBtnText');
+    if (isFirefox) {
+        btnEl.href = firefoxUrl;
+        iconEl.innerHTML = firefoxSvg;
+        textEl.textContent = 'Добавить в Firefox';
+    } else {
+        btnEl.href = chromeUrl;
+        iconEl.innerHTML = chromeSvg;
+        textEl.textContent = 'Добавить в Chrome';
+    }
+    if (!isAdmin && sessionStorage.getItem('chromeExtPopupDismissed') === '1') return;
+    var popup = document.getElementById('chromeExtPopup');
+    if (!popup) return;
+    setTimeout(function() { popup.style.display = 'flex'; }, 3000);
+    function dismiss() {
+        popup.classList.add('cep-hiding');
+        sessionStorage.setItem('chromeExtPopupDismissed', '1');
+        setTimeout(function() { popup.style.display = 'none'; popup.classList.remove('cep-hiding'); }, 230);
+    }
+    document.getElementById('chromeExtClose').addEventListener('click', dismiss);
+    document.getElementById('chromeExtDismiss').addEventListener('click', dismiss);
+    document.getElementById('chromeExtInstall').addEventListener('click', function() {
+        sessionStorage.setItem('chromeExtPopupDismissed', '1');
+    });
+})();
+</script>
+
+
+
+
+</body>
+</html>
+

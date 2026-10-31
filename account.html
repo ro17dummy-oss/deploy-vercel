@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Nox Aion 4.8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Panel &amp; Login Akun | NOX AION 4.8</title>
+  <meta name="description" content="Profile Panel Daeva Nox Aion 4.8: kelola saldo Credit (Toll), status Prestige Pack, daftar karakter al_server_gs.players, Unstuck, dan keamanan akun." />
+  <link rel="icon" type="image/png" href="assets/aion20/assets/nox-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/aion20/styles/aion-core.css" />
+  <link rel="stylesheet" href="assets/aion20/styles/home.css" />
+  <link rel="stylesheet" href="assets/aion20/styles/nox-modules.css" />
+</head>
+<body>
+
+<header class="site-header scrolled" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="NOX AION">
+      <img src="assets/aion20/assets/nox-logo.png" alt="Logo Nox Aion" />
+      <span class="wm">NOX AION</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="prestige.html">Prestige Pack</a></li>
+      <li><a href="ratings.html">Rank List</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang" id="lang">
+        <button type="button" class="lang-btn" id="langBtn" aria-expanded="false" aria-label="Select Language">
+          <span id="currentLangCode">EN</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" role="menu">
+          <button type="button" class="active" data-set-lang="en"><span>English</span><span class="code">EN</span></button>
+          <button type="button" data-set-lang="id"><span>Bahasa</span><span class="code">ID</span></button>
+          <button type="button" data-set-lang="ph"><span>Filipino</span><span class="code">PH</span></button>
+        </div>
+      </div>
+
+      <a class="register-nav-btn" id="headerRegisterBtn" href="register.html">Daftar Akun</a>
+
+      <a class="login-btn" href="account.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span id="headerAccountTxt">Masuk Akun</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Buka Menu Navigasi"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Beranda</a>
+  <a href="marketplace.html">Marketplace</a>
+  <a href="prestige.html">Prestige Pack</a>
+  <a href="ratings.html">Rank List</a>
+  <a href="register.html">Buat Akun Baru (Register)</a>
+  <a href="account.html">Profile Panel / Login</a>
+</nav>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="wrap page-hero-head">
+    <div>
+      <span class="kicker">Daeva Command Center · al_server_ls &amp; al_server_gs</span>
+      <h1>Profile Panel <span class="accent">&amp; Akun</span></h1>
+      <p class="sub">Masuk untuk menampilkan <b>Saldo Credit (Toll)</b> di header, memilih karakter penerima item Marketplace, melakukan teleport <b>Unstuck</b>, dan memantau riwayat transaksi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACCOUNT / PROFILE CONTENT ===================== -->
+<section class="section-pad" style="padding-top:44px;">
+  <div class="wrap">
+
+    <!-- ==========================================================
+         STATE 1: GUEST LOGIN VIEW (Muncul jika belum login)
+         ========================================================== -->
+    <div id="accountGuestView" class="split-page-grid">
+      <div class="panel-box">
+        <span class="kicker" style="margin-bottom:6px;">Otentikasi Akun AION 4.8</span>
+        <h2>Masuk ke <span style="color:var(--gold);">Profile Panel</span></h2>
+        <p style="color:var(--muted);font-size:14.5px;margin-bottom:24px;">
+          Gunakan kredensial akun game Anda untuk membuka dompet Credit dan fitur transaksi Marketplace.
+        </p>
+
+        <form id="pageLoginForm" class="form-stack">
+          <div class="form-group">
+            <label for="loginPageUsername">Username Akun Game</label>
+            <input type="text" id="loginPageUsername" class="input-field" placeholder="Masukkan username Anda" required />
+          </div>
+
+          <div class="form-group">
+            <label for="loginPagePassword">Password</label>
+            <input type="password" id="loginPagePassword" class="input-field" placeholder="••••••••" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="justify-content:center;width:100%;">
+            Masuk ke Profile Panel
+          </button>
+        </form>
+
+        <div style="margin-top:22px;padding-top:20px;border-top:1px dashed var(--gold-line);text-align:center;">
+          <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">
+            Ingin langsung menguji tampilan <b>Profile Panel</b>, <b>Credit di Header</b>, dan belanja <b>Marketplace</b>?
+          </p>
+          <button type="button" id="btnDemoQuickLogin" class="btn btn-ghost" style="justify-content:center;width:100%;border-color:var(--gold-line);color:var(--gold);">
+            ⚡ Masuk Instan Akun Demo (daeva_commander · 2.500 Credit)
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <span class="kicker" style="margin-bottom:6px;">Fitur Khusus Member</span>
+        <h3>Akses di Dalam <span style="color:var(--gold);">Profile Panel</span></h3>
+        <ul class="prestige-perks">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><b>Dompet Credit (Toll) Real-Time:</b> Saldo Credit muncul di navigasi atas dan siap dipakai untuk membeli item Marketplace atau mengaktifkan Prestige Pack.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><b>Pemilihan Karakter Penerima Item:</b> Tentukan karakter dari tabel <code>al_server_gs.players</code> yang menerima pengiriman Express Mail.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><b>Teleport Unstuck Instan:</b> Pindahkan karakter yang terjebak di map kembali ke Obelisk Sanctum atau Pandaemonium.</span>
+          </li>
+        </ul>
+        <a href="register.html" class="btn btn-ghost" style="justify-content:center;width:100%;">
+          Belum Punya Akun? Buat Akun Baru →
+        </a>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         STATE 2: LOGGED-IN PROFILE PANEL (Muncul setelah login)
+         ========================================================== -->
+    <div id="accountMemberView" class="profile-layout" hidden>
+      <!-- Sidebar Profile -->
+      <aside class="profile-sidebar">
+        <div class="profile-user-card">
+          <div class="profile-avatar" id="profAvatarInitial">D</div>
+          <div class="profile-user-meta">
+            <strong id="profUsername">daeva_commander</strong>
+            <small id="profEmail">commander@noxaion.com</small>
+            <span class="race-badge elyos" style="margin-top:6px;font-size:10px;padding:2px 7px;">Status: Aktif · Verified</span>
+          </div>
+        </div>
+
+        <nav class="profile-nav" aria-label="Menu Profile Panel">
+          <button type="button" class="profile-nav-btn active" data-prof-tab="overview">
+            <span class="nav-lbl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+              <span>Ringkasan &amp; Dompet</span>
+            </span>
+            <span>›</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-prof-tab="characters">
+            <span class="nav-lbl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Karakter &amp; Unstuck</span>
+            </span>
+            <span>›</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-prof-tab="transactions">
+            <span class="nav-lbl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+              <span>Riwayat Transaksi</span>
+            </span>
+            <span>›</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-prof-tab="security">
+            <span class="nav-lbl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Ganti Password Game</span>
+            </span>
+            <span>›</span>
+          </button>
+        </nav>
+
+        <div style="padding-top:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px;">
+          <button type="button" class="btn btn-primary" data-open-topup="true" style="justify-content:center;width:100%;padding:11px 14px;font-size:13.5px;">
+            + Top Up Credit (Toll)
+          </button>
+          <button type="button" id="btnProfileLogout" class="btn btn-ghost" style="justify-content:center;width:100%;padding:11px 14px;font-size:13.5px;">
+            Keluar Akun (Logout)
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content Profile -->
+      <div class="profile-main">
+        <!-- 4-Column Symmetric KPI Row -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <span class="k-lbl">Saldo Credit (Toll)</span>
+            <div class="k-val" id="profCreditVal" style="color:var(--gold);">◈ 2.500</div>
+            <span class="k-sub">al_server_ls.account_data.toll</span>
+          </div>
+          <div class="kpi-card">
+            <span class="k-lbl">Status Membership</span>
+            <div class="k-val" id="profVipVal">Archon VIP</div>
+            <span class="k-sub" id="profVipSub">Membership Tier 2 · Aktif</span>
+          </div>
+          <div class="kpi-card">
+            <span class="k-lbl">Karakter Terdaftar</span>
+            <div class="k-val" id="profCharCount">2 Karakter</div>
+            <span class="k-sub">al_server_gs.players</span>
+          </div>
+          <div class="kpi-card">
+            <span class="k-lbl">Penerima Express Mail</span>
+            <div class="k-val" id="profActiveChar" style="color:#4ade80;">Mirinda</div>
+            <span class="k-sub">Target Pengiriman Item</span>
+          </div>
+        </div>
+
+        <!-- TAB 1: OVERVIEW -->
+        <div class="panel-box" data-prof-pane="overview">
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line);">
+            <div>
+              <span class="kicker" style="margin-bottom:6px;">Sinkronisasi Database AION 4.8</span>
+              <h3 style="margin-bottom:0;">Informasi Akun &amp; <span style="color:var(--gold);">Parameter Server</span></h3>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="marketplace.html" class="btn btn-primary" style="padding:9px 16px;font-size:13.5px;">Buka Marketplace</a>
+              <a href="prestige.html" class="btn btn-ghost" style="padding:9px 16px;font-size:13.5px;">Upgrade Prestige</a>
+            </div>
+          </div>
+
+          <div class="account-info-grid">
+            <div class="account-info-item">
+              <span class="lbl">Username LoginServer</span>
+              <span class="val" id="infoAccountName">daeva_commander</span>
+            </div>
+            <div class="account-info-item">
+              <span class="lbl">Email Terdaftar</span>
+              <span class="val" id="infoAccountEmail">commander@noxaion.com</span>
+            </div>
+            <div class="account-info-item">
+              <span class="lbl">Paket Membership</span>
+              <span class="val" id="infoAccountTier" style="color:var(--gold);">Archon Prestige Pack (30 Hari)</span>
+            </div>
+            <div class="account-info-item">
+              <span class="lbl">Karakter Penerima Aktif</span>
+              <span class="val" id="infoActiveChar" style="color:#4ade80;">Mirinda</span>
+            </div>
+            <div class="account-info-item">
+              <span class="lbl">Status Enkripsi Password</span>
+              <span class="val">SHA-1 Base64 (Native 4.8)</span>
+            </div>
+            <div class="account-info-item">
+              <span class="lbl">Status Akun Game</span>
+              <span class="val" style="color:#4ade80;">Activated = 1 (Normal)</span>
+            </div>
+          </div>
+
+          <h4 style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:12px;">
+            Karakter Terhubung &amp; Pintasan Unstuck
+          </h4>
+          <div class="char-grid" id="overviewCharGrid">
+            <!-- Dirender oleh nox-app.js -->
+          </div>
+        </div>
+
+        <!-- TAB 2: CHARACTERS & UNSTUCK -->
+        <div class="panel-box" data-prof-pane="characters" hidden>
+          <span class="kicker" style="margin-bottom:6px;">Manajemen Karakter In-Game</span>
+          <h3>Daftar Karakter <span style="color:var(--gold);">(al_server_gs.players)</span></h3>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:20px;">
+            Pilih karakter utama yang akan menerima pengiriman item Marketplace, atau tekan tombol <b>Unstuck</b> jika karakter Anda terjebak di dalam koordinat map.
+          </p>
+          <div class="char-grid" id="profCharGrid">
+            <!-- Dirender oleh nox-app.js -->
+          </div>
+        </div>
+
+        <!-- TAB 3: TRANSACTIONS -->
+        <div class="panel-box" data-prof-pane="transactions" hidden>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px;">
+            <div>
+              <span class="kicker" style="margin-bottom:6px;">Buku Besar Credit &amp; Toll</span>
+              <h3 style="margin-bottom:0;">Riwayat Mutasi <span style="color:var(--gold);">Credit (Toll)</span></h3>
+            </div>
+            <button type="button" class="btn btn-primary" data-open-topup="true" style="padding:9px 16px;font-size:13.5px;">+ Top Up Credit</button>
+          </div>
+          <div class="rank-table-wrap">
+            <table class="rank-table compact-table">
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Deskripsi Transaksi / Layanan</th>
+                  <th class="col-num">Mutasi Credit</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="profTxBody">
+                <!-- Dirender oleh nox-app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 4: SECURITY -->
+        <div class="panel-box" data-prof-pane="security" hidden>
+          <span class="kicker" style="margin-bottom:6px;">Keamanan LoginServer</span>
+          <h3>Ubah Password <span style="color:var(--gold);">Login Game</span></h3>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:20px;">
+            Memperbarui kolom <code>password</code> (SHA-1 Base64) pada tabel <code>al_server_ls.account_data</code>. Pastikan akun Anda sedang keluar dari dalam game sebelum mengganti password.
+          </p>
+          <form id="profPassForm" class="form-stack" style="max-width:460px;">
+            <div class="form-group">
+              <label for="profOldPass">Password Saat Ini</label>
+              <input type="password" id="profOldPass" class="input-field" placeholder="••••••••" required />
+            </div>
+            <div class="form-group">
+              <label for="profNewPass">Password Baru (Minimal 6 Karakter)</label>
+              <input type="password" id="profNewPass" class="input-field" placeholder="Masukkan password baru" minlength="6" required />
+            </div>
+            <button type="submit" class="btn btn-primary" style="justify-content:center;">
+              Simpan Password Baru
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="margin-top:0;">
+      <span class="disclaimer">© 2026 Nox Aion 4.8 Community Server.</span>
+      <a href="index.html" style="color:var(--accent);">← Kembali ke Beranda</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL TOP UP CREDIT -->
+<div class="nox-modal-backdrop" id="topupModal" role="dialog" aria-modal="true" aria-labelledby="topupModalTitle" aria-hidden="true">
+  <div class="nox-modal">
+    <button type="button" class="modal-close" data-close-modal="topupModal" aria-label="Tutup Jendela">✕</button>
+    <span class="kicker" style="margin-bottom:8px;">Sinkronisasi al_server_ls.account_data.toll</span>
+    <h3 id="topupModalTitle" style="font-size:28px;margin-bottom:18px;">Isi Ulang <span style="color:var(--gold);">Credit (Toll)</span></h3>
+    <form id="topupForm" class="form-stack">
+      <div class="topup-packages">
+        <button type="button" class="topup-Option" data-topup-amt="500"><span class="credit-amt">500 Credit</span><span class="idr-price">Rp 50.000 · Instan</span></button>
+        <button type="button" class="topup-Option selected" data-topup-amt="1250"><span class="credit-amt">1.250 Credit</span><span class="idr-price">Rp 100.000 · Bonus +250</span></button>
+        <button type="button" class="topup-Option" data-topup-amt="2750"><span class="credit-amt">2.750 Credit</span><span class="idr-price">Rp 200.000 · Bonus +750</span></button>
+        <button type="button" class="topup-Option" data-topup-amt="6000"><span class="credit-amt">6.000 Credit</span><span class="idr-price">Rp 400.000 · Bonus +2.000</span></button>
+      </div>
+      <div class="form-group">
+        <label for="topupMethod">Metode Pembayaran Otomatis</label>
+        <select id="topupMethod" class="input-field">
+          <option value="QRIS Instant">QRIS (Semua E-Wallet &amp; Mobile Banking)</option>
+          <option value="BCA Virtual Account">BCA Virtual Account</option>
+          <option value="Mandiri Virtual Account">Mandiri Virtual Account</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Konfirmasi Top Up Sekarang</button>
+    </form>
+  </div>
+</div>
+
+<aside class="access-toast" id="access-toast" role="status" aria-live="polite">
+  <button type="button" class="toast-close" aria-label="Tutup Notifikasi">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="toast-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg>
+  </div>
+  <div class="toast-body">
+    <h4>Sistem Nox Aion 4.8</h4>
+    <p id="toastMessageText"></p>
+  </div>
+</aside>
+
+<script src="assets/aion20/home.js"></script>
+<script src="assets/aion20/nox-app.js"></script>
+</body>
+</html>

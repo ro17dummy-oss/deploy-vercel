@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Nox Aion 4.8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abyss GP &amp; AP Rank List | NOX AION 4.8</title>
+  <meta name="description" content="Peringkat Abyss Glory Points (GP), Abyss Points (AP), dan PvP Kills real-time dari al_server_gs.abyss_rank Nox Aion 4.8." />
+  <link rel="icon" type="image/png" href="assets/aion20/assets/nox-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/aion20/styles/aion-core.css" />
+  <link rel="stylesheet" href="assets/aion20/styles/home.css" />
+  <link rel="stylesheet" href="assets/aion20/styles/nox-modules.css" />
+</head>
+<body>
+
+<header class="site-header scrolled" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="NOX AION">
+      <img src="assets/aion20/assets/nox-logo.png" alt="Logo Nox Aion" />
+      <span class="wm">NOX AION</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="prestige.html">Prestige Pack</a></li>
+      <li><a href="ratings.html" class="active">Rank List</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang" id="lang">
+        <button type="button" class="lang-btn" id="langBtn" aria-expanded="false" aria-label="Select Language">
+          <span id="currentLangCode">EN</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" role="menu">
+          <button type="button" class="active" data-set-lang="en"><span>English</span><span class="code">EN</span></button>
+          <button type="button" data-set-lang="id"><span>Bahasa</span><span class="code">ID</span></button>
+          <button type="button" data-set-lang="ph"><span>Filipino</span><span class="code">PH</span></button>
+        </div>
+      </div>
+
+      <a class="register-nav-btn" id="headerRegisterBtn" href="register.html">Daftar Akun</a>
+
+      <a class="login-btn" href="account.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span id="headerAccountTxt">Masuk Akun</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Buka Menu Navigasi"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Beranda</a>
+  <a href="marketplace.html">Marketplace</a>
+  <a href="prestige.html">Prestige Pack</a>
+  <a href="ratings.html">Rank List</a>
+  <a href="register.html">Buat Akun Baru (Register)</a>
+  <a href="account.html">Profile Panel / Login</a>
+</nav>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="wrap page-hero-head">
+    <div>
+      <span class="kicker">Real-Time Leaderboard · al_server_gs.abyss_rank</span>
+      <h1>Abyss &amp; PvP <span class="accent">Rank List</span></h1>
+      <p class="sub">Klasemen Daeva terbaik di seluruh Atreia yang dihitung langsung dari <b>Glory Points (GP)</b>, <b>Abyss Points (AP)</b>, dan total kemenangan <b>PvP Kills</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RANKINGS CONTENT ===================== -->
+<section class="section-pad" style="padding-top:44px;">
+  <div class="wrap">
+
+    <div class="filter-bar">
+      <div class="filter-tabs" role="tablist" aria-label="Filter Fraksi">
+        <button type="button" class="filter-btn active" data-rank-race="all">Semua Fraksi</button>
+        <button type="button" class="filter-btn" data-rank-race="elyos">Elyos (Sanctum)</button>
+        <button type="button" class="filter-btn" data-rank-race="asmodian">Asmodian (Pandaemonium)</button>
+      </div>
+
+      <div class="filter-search" style="max-width:460px;">
+        <select id="rankSortSelect" class="input-field" style="max-width:210px;" aria-label="Urutkan Berdasarkan">
+          <option value="gp">Urutkan: Glory Points (GP)</option>
+          <option value="ap">Urutkan: Abyss Points (AP)</option>
+          <option value="kills">Urutkan: Total PvP Kills</option>
+        </select>
+        <input type="search" id="rankSearchInput" class="input-field" placeholder="Cari nama karakter, class, atau legion..." aria-label="Cari Karakter" />
+      </div>
+    </div>
+
+    <div class="rank-table-wrap">
+      <table class="rank-table">
+        <thead>
+          <tr>
+            <th style="width:68px;">#</th>
+            <th>Karakter &amp; Legion</th>
+            <th>Fraksi</th>
+            <th>Pangkat Abyss</th>
+            <th class="col-num">Glory Points (GP)</th>
+            <th class="col-num">Abyss Points (AP)</th>
+            <th class="col-num">Total Kill (Winrate)</th>
+          </tr>
+        </thead>
+        <tbody id="rankTableBody">
+          <!-- Dirender oleh nox-app.js (7 kolom) -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="margin-top:0;">
+      <span class="disclaimer">© 2026 Nox Aion 4.8 Community Server.</span>
+      <a href="index.html" style="color:var(--accent);">← Kembali ke Beranda</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL TOP UP CREDIT -->
+<div class="nox-modal-backdrop" id="topupModal" role="dialog" aria-modal="true" aria-labelledby="topupModalTitle" aria-hidden="true">
+  <div class="nox-modal">
+    <button type="button" class="modal-close" data-close-modal="topupModal" aria-label="Tutup Jendela">✕</button>
+    <span class="kicker" style="margin-bottom:8px;">Sinkronisasi al_server_ls.account_data.toll</span>
+    <h3 id="topupModalTitle" style="font-size:28px;margin-bottom:18px;">Isi Ulang <span style="color:var(--gold);">Credit (Toll)</span></h3>
+    <form id="topupForm" class="form-stack">
+      <div class="topup-packages">
+        <button type="button" class="topup-Option" data-topup-amt="500"><span class="credit-amt">500 Credit</span><span class="idr-price">Rp 50.000 · Instan</span></button>
+        <button type="button" class="topup-Option selected" data-topup-amt="1250"><span class="credit-amt">1.250 Credit</span><span class="idr-price">Rp 100.000 · Bonus +250</span></button>
+        <button type="button" class="topup-Option" data-topup-amt="2750"><span class="credit-amt">2.750 Credit</span><span class="idr-price">Rp 200.000 · Bonus +750</span></button>
+        <button type="button" class="topup-Option" data-topup-amt="6000"><span class="credit-amt">6.000 Credit</span><span class="idr-price">Rp 400.000 · Bonus +2.000</span></button>
+      </div>
+      <div class="form-group">
+        <label for="topupMethod">Metode Pembayaran Otomatis</label>
+        <select id="topupMethod" class="input-field">
+          <option value="QRIS Instant">QRIS (Semua E-Wallet &amp; Mobile Banking)</option>
+          <option value="BCA Virtual Account">BCA Virtual Account</option>
+          <option value="Mandiri Virtual Account">Mandiri Virtual Account</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Konfirmasi Top Up Sekarang</button>
+    </form>
+  </div>
+</div>
+
+<aside class="access-toast" id="access-toast" role="status" aria-live="polite">
+  <button type="button" class="toast-close" aria-label="Tutup Notifikasi">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="toast-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg>
+  </div>
+  <div class="toast-body">
+    <h4>Sistem Nox Aion 4.8</h4>
+    <p id="toastMessageText"></p>
+  </div>
+</aside>
+
+<script src="assets/aion20/home.js"></script>
+<script src="assets/aion20/nox-app.js"></script>
+</body>
+</html>
